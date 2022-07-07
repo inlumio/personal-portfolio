@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;1,200&display=swap');
 
 :root {
-	--first-color: #f12711;
-	--second-color: #ffea00;
+	--first-color: #ffd600;
+	--second-color: #f12711;
 }
 
 *,
@@ -21,7 +21,6 @@ a {
 body {
 	font-family: 'Poppins', sans-serif;
 	font-size: 1.2rem;
-	background: linear-gradient(90deg, var(--first-color), var(--second-color));
 	color: #f0f0f0;
 }
 
@@ -29,15 +28,10 @@ header {
 	display: flex;
 	justify-content: space-between;
 	padding: 1rem 2rem;
-	background-color: rgba(255, 255, 255, 0.5);
-}
-
-.logo {
+	background-color: rgba(255, 255, 255, 0.6);
 	color: var(--second-color);
-}
-
-nav {
-	color: var(--first-color);
+	position: fixed;
+	width: 100%;
 }
 
 .navbar__list {
@@ -52,6 +46,37 @@ nav {
 	padding: 0 1rem;
 }
 
+.burger {
+	height: 30px;
+}
+
+.hero {
+	width: 100%;
+	height: 100vh;
+	background-image: url(./img/header-back-medium.jpg), linear-gradient(90deg, var(--first-color), var(--first-color));
+	background-size: cover;
+	background-position: 0 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.hero__text {
+	padding: 0 1rem;
+	text-align: center;	
+}
+
+.hero__header {
+	font-size: 3rem;
+	font-weight: 700;
+}
+
+.hero__subheader {
+	font-style: italic;
+	color: var(--second-color);
+}
+
+
 @media screen and (min-width: 700px) {
 	.navbar__list {
 		display: flex;
@@ -59,5 +84,11 @@ nav {
 
 	.burger {
 		display: none;
+	}
+}
+
+@media screen and (min-width: 1200px) {
+	body {
+		font-size: 1.6rem;
 	}
 }
