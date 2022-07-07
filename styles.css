@@ -40,6 +40,25 @@ header {
 }
 
 .navbar__items {
+	position: relative;
+}
+
+.navbar__items::after {
+	content: '';
+	height: 3px;
+	width: 0;
+	margin: 0 auto;
+	background: var(--second-color);
+	position: absolute;
+	left: 0;
+	bottom: -0.2rem;
+	display: flex;
+	justify-content: center;
+	transition: all 0.25s linear 0s;
+}
+
+.navbar__items:hover::after {
+	width: 100%;
 }
 
 .navbar__links {
@@ -53,7 +72,8 @@ header {
 .hero {
 	width: 100%;
 	height: 100vh;
-	background-image: url(./img/header-back-medium.jpg), linear-gradient(90deg, var(--first-color), var(--first-color));
+	background-image: url(./img/header-back-medium.jpg),
+		linear-gradient(90deg, var(--first-color), var(--first-color));
 	background-size: cover;
 	background-position: 0 0;
 	display: flex;
@@ -63,7 +83,7 @@ header {
 
 .hero__text {
 	padding: 0 1rem;
-	text-align: center;	
+	text-align: center;
 }
 
 .hero__header {
@@ -75,7 +95,6 @@ header {
 	font-style: italic;
 	color: var(--second-color);
 }
-
 
 @media screen and (min-width: 700px) {
 	.navbar__list {
