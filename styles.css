@@ -1,8 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;1,200&display=swap');
 
 :root {
-	--first-color: #ffd600;
+	--first-color: #ffd70d;
+	--first-color-darker: #f3ca00;
 	--second-color: #f12711;
+	--second-color-light: #ff998d;
 }
 
 *,
@@ -36,6 +38,7 @@ header {
 	color: var(--second-color);
 	position: fixed;
 	width: 100%;
+	z-index: 2;
 }
 
 .navbar__list {
@@ -80,6 +83,9 @@ header {
 		linear-gradient(90deg, var(--first-color), var(--first-color));
 	background-size: cover;
 	background-position: 0 0;
+}
+
+.centered-inside {
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -101,7 +107,7 @@ header {
 }
 
 .projects {
-	padding: 5rem calc(1vw + 1rem);
+	padding: 4rem calc(1vw + 1rem);
 	text-align: center;
 }
 
@@ -119,20 +125,17 @@ header {
 	grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
 	gap: 2rem;
 	max-width: 1280px;
-	margin: 0 auto;
+	margin: 0 auto 3rem auto;
 }
 
 .project {
 	display: inline-block;
-	border-radius: 0.2rem;
+	border-radius: 0.25rem;
 	box-shadow: 0 0 10px 1px #aaa;
 	display: flex;
 	flex-direction: column;
 	transition: all 0.25s linear 0s;
-}
-
-.project:hover {
-	transform: scale(1.1);
+	overflow: hidden;
 }
 
 .project__image {
@@ -144,8 +147,51 @@ header {
 
 .project__title {
 	font-size: calc(1vh + 0.4rem);
+	font-weight: 700;
 	padding: 1rem 0.5rem;
-	color: var(--first-color);
+	color: var(--first-color-darker);
+	transition: all 0.5s linear 0s;
+}
+
+.project:hover {
+	transform: scale(1.05);
+}
+
+.project:hover .project__title {
+	color: var(--second-color);
+}
+
+.projects__profile-link {
+	display: inline-block;
+	color: var(--second-color);
+	background-color: var(--first-color);
+	padding: 0.5rem 1rem;
+	border-radius: .2rem;
+	transition: all 0.4s ease-in-out 0.1s;
+}
+
+.fa-chevron-right {
+	padding-left: 0.25rem;
+	transition: all 0.25s ease-in-out 0.1s;
+}
+
+.projects__profile-link:hover {
+	transform: scale(1.1);
+}
+
+.projects__profile-link:hover .fa-chevron-right {
+	padding-left: 0.75rem;
+}
+
+.projects__profile-link:active {
+	color: var(--second-color-light);
+}
+
+.contacts {
+	background-color: var(--first-color);
+	padding: 4rem 1rem;
+	height: 50vh;
+	text-align: center;
 }
 
 @media screen and (min-width: 700px) {
