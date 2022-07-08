@@ -217,7 +217,7 @@ header {
 .contacts {
 	background-color: var(--first-color);
 	padding: 4rem 1rem;
-	height: 50vh;
+	height: 40vh;
 	text-align: center;
 	flex-direction: column;
 	text-shadow: 1px 1px 3px black;
