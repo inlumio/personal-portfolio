@@ -13,9 +13,9 @@
 		<link rel="stylesheet" href="styles.css" />
 	</head>
 	<body>
-		<header>
+		<header id="navbar">
 			<div class="logo">Vlady</div>
-			<nav class="navbar" id="navbar">
+			<nav class="navbar">
 				<ul class="navbar__list">
 					<li class="navbar__items">
 						<a href="#welcome-section" class="navbar__links">About</a>
@@ -40,12 +40,14 @@
 				</article>
 			</section>
 			<section class="projects" id="projects">
-				<h1 class="projects__header">Some of my projects</h1>
+				<h1 class="projects__header header">
+					<span class="underline">Some of my projects</span>
+				</h1>
 				<article class="projects__grid">
 					<a
 						href="https://codepen.io/freeCodeCamp/full/qRZeGZ"
 						target="_blank"
-						class="project"
+						class="project-tile"
 					>
 						<img
 							class="project__image"
@@ -61,7 +63,7 @@
 					<a
 						href="https://codepen.io/freeCodeCamp/full/wgGVVX"
 						target="_blank"
-						class="project"
+						class="project-tile"
 					>
 						<img
 							class="project__image"
@@ -77,7 +79,7 @@
 					<a
 						href="https://codepen.io/freeCodeCamp/full/wGqEga"
 						target="_blank"
-						class="project"
+						class="project-tile"
 					>
 						<img
 							class="project__image"
@@ -93,7 +95,7 @@
 					<a
 						href="https://codepen.io/freeCodeCamp/full/KzXQgy"
 						target="_blank"
-						class="project"
+						class="project-tile"
 					>
 						<img
 							class="project__image"
@@ -109,21 +111,59 @@
 				</article>
 				<a
 					href="https://github.com/inlumio"
+					target="_blank"
 					id="profile-link"
 					class="projects__profile-link"
 				>
 					Watch more
 					<i class="fa-solid fa-chevron-right"></i>
 				</a>
-				
 			</section>
 
 			<section class="contacts centered-inside" id="contacts">
-					<h1 class="contacts__header">Do You wanna work with me?</h1>
-					<article class="contacts__links">
-						
-					</article>				
+				<h1 class="contacts__header header">
+					<span class="underline">Do You wanna work with me?</span>
+				</h1>
+				<article class="contacts__links">
+					<a
+						href="https://www.facebook.com/vladyslav.pjatkyvskyj/"
+						class="contacts__link"
+						><i class="fa-brands fa-facebook contacts__icon"></i>Facebook</a
+					>
+					<a
+						href="https://www.linkedin.com/in/vladyslav-piatkivskyi/"
+						class="contacts__link"
+						><i class="fa-brands fa-linkedin contacts__icon"></i>LinkedIn</a
+					>
+					<a href="https://twitter.com/VPiatkivskyi" class="contacts__link"
+						><i class="fa-brands fa-twitter contacts__icon"></i>Twitter</a
+					>
+					<a
+						href="mailto:vladyslav.piatkivskyi@gmail.com"
+						class="contacts__link"
+						><i class="fa-solid fa-at contacts__icon"></i>Message me</a
+					>
+					<a href="tel:+380506815783" class="contacts__link"
+						><i class="fa-solid fa-phone contacts__icon"></i>Call me</a
+					>
+				</article>
 			</section>
 		</main>
+		<footer>
+			<p class="additional-description">
+				**This is a testing version. All the projects given are not mine. My
+				projects will be soon. Some stylings have taken from <a href="https://personal-portfolio.freecodecamp.rocks/"><em>this example of a personal portfolio</em></a>
+			</p>
+			<p class="author">
+				© Created by Vlady for
+				<a href="https://www.freecodecamp.com/" target="_blank"
+					>freeCodeCamp <i class="fab fa-free-code-camp"></i
+				></a>
+				<a
+					href="https://www.freecodecamp.org/learn/2022/responsive-web-design/build-a-personal-portfolio-webpage-project/build-a-personal-portfolio-webpage"
+					>task.</a
+				>
+			</p>
+		</footer>
 	</body>
 </html>

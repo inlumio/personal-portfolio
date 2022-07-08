@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;1,200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;1,200;1,400&display=swap');
 
 :root {
 	--first-color: #ffd70d;
@@ -30,14 +30,51 @@ body {
 	color: #fff;
 }
 
+.header {
+	font-size: 2rem;
+	position: relative;
+	line-height: 2;
+}
+
+.underline {
+	padding-bottom: 0.5rem;
+	border: none;
+	
+	position: relative;
+}
+
+.underline::after {
+	content: '';
+	width: 0%;
+	bottom: 0;
+	left: 0;
+	height: 3px;
+	background: var(--second-color);
+	position: absolute;
+	transition: all 0.5s linear 0s;
+}
+
+section:hover .underline::after {
+	width: 100%;
+}
+
+.centered-inside {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
 header {
 	display: flex;
 	justify-content: space-between;
 	padding: 1rem 2rem;
 	background-color: rgba(255, 255, 255, 0.6);
 	color: var(--second-color);
-	position: fixed;
 	width: 100%;
+}
+
+#navbar {
+	position: fixed;
 	z-index: 2;
 }
 
@@ -59,8 +96,6 @@ header {
 	position: absolute;
 	left: 0;
 	bottom: -0.2rem;
-	display: flex;
-	justify-content: center;
 	transition: all 0.25s linear 0s;
 }
 
@@ -83,12 +118,6 @@ header {
 		linear-gradient(90deg, var(--first-color), var(--first-color));
 	background-size: cover;
 	background-position: 0 0;
-}
-
-.centered-inside {
-	display: flex;
-	justify-content: center;
-	align-items: center;
 }
 
 .hero__text {
@@ -114,9 +143,7 @@ header {
 .projects__header {
 	display: inline-block;
 	padding: 0 1rem;
-	font-size: 2rem;
 	margin: 0 auto 3rem auto;
-	border-bottom: 0.2rem solid var(--second-color);
 	color: var(--first-color);
 }
 
@@ -128,7 +155,7 @@ header {
 	margin: 0 auto 3rem auto;
 }
 
-.project {
+.project-tile{
 	display: inline-block;
 	border-radius: 0.25rem;
 	box-shadow: 0 0 10px 1px #aaa;
@@ -153,11 +180,11 @@ header {
 	transition: all 0.5s linear 0s;
 }
 
-.project:hover {
+.project-tile:hover {
 	transform: scale(1.05);
 }
 
-.project:hover .project__title {
+.project-tile:hover .project__title {
 	color: var(--second-color);
 }
 
@@ -192,6 +219,47 @@ header {
 	padding: 4rem 1rem;
 	height: 50vh;
 	text-align: center;
+	flex-direction: column;
+	text-shadow: 1px 1px 3px black;
+}
+
+.contacts__header {
+	margin-bottom: 2rem;
+}
+
+.contacts__links {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: 2rem;
+}
+
+.contacts__link {
+	transition: transform .2s ease-in-out 0s;
+}
+
+.contacts__link:hover {
+	transform: translateY(5px);
+}
+
+.contacts__icon {
+	margin-right: 0.5rem;
+}
+
+footer {
+	background-color: var(--first-color);
+	padding: 2rem;
+	text-align: center;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 4rem;
+	border-top: 5px solid var(--second-color);
+}
+
+footer em {
+	font-weight: 400;
 }
 
 @media screen and (min-width: 700px) {
